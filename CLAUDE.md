@@ -43,7 +43,7 @@ pnpm check      # Format, lint, and typecheck (run before commits)
   src/
     TitleScreen/
       index.ts       # exports showTitleScreen()
-      index.test.ts  # tests for the module
+      tests.ts       # tests for the module
       consts.ts      # LOGO, PROMPT_TEXT, etc.
     Game/
       index.ts       # exports Game class
@@ -59,7 +59,7 @@ pnpm check      # Format, lint, and typecheck (run before commits)
   Standard files within a module directory:
 
   - `index.ts` - Main module implementation and exports
-  - `index.test.ts` - Tests for the module
+  - `tests.ts` - Tests for the module
   - `consts.ts` - Module-specific constants
   - `types.ts` - Module-specific type definitions (if needed)
 

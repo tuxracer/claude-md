@@ -1,6 +1,6 @@
 # Project Name
 
-See [README.md](README.md) for installation prerequisites, API documentation, and usage examples. See [docs/TRD.md](docs/TRD.md) for technical details including architecture, ANSI sequence support, and keyboard input mapping.
+See [README.md](README.md) for installation prerequisites, API documentation, and usage examples. See [docs/TRD.md](docs/TRD.md) for technical details.
 
 **Repository URL**: https://github.com/tuxracer/REPOSITORY-NAME-HERE
 
@@ -26,6 +26,7 @@ pnpm check      # Format, lint, and typecheck (run before commits)
 
 ## Coding Standards
 
+- **Never log sensitive data**: Do not log API keys, tokens, passwords, or other secrets. Use placeholder text like `[REDACTED]` if you need to indicate a value exists without revealing it
 - **Package manager**: Use `pnpm` for all package management (install, add, remove, etc.)
 - **ESM imports only**: Always use `import` syntax, never `require()`. This is an ESM project and `require` will throw `ReferenceError: require is not defined`
 - **Arrow functions**: Use `const foo = () => { ... }` (enforced by ESLint, auto-fixable)

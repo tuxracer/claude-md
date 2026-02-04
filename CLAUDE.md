@@ -61,7 +61,7 @@ pnpm check      # Format, lint, and typecheck (run before commits)
   - `index.ts` - Main module implementation and exports
   - `tests.ts` - Tests for the module
   - `consts.ts` - Module-specific constants
-  - `types.ts` - Module-specific type definitions (if needed)
+  - `types.ts` - Module-specific type definitions and their type guards (if needed)
 
 - **Avoid re-exports**: Don't re-export from index.ts or create barrel files. Re-exports obscure where code actually lives, create unnecessary coupling between modules, and make it harder to trace imports. Import directly from the source file:
 

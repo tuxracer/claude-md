@@ -118,7 +118,7 @@ pnpm check      # Format, lint, and typecheck (run before commits)
 
   ```typescript
   // GOOD - validates the value is one of the allowed options
-  import { isPostProcessingMode } from "../../utils/typeGuards";
+  import { isPostProcessingMode } from "../VideoConfig";
 
   if (isPostProcessingMode(value)) {
     config.video_postprocessing_mode = value; // No cast needed

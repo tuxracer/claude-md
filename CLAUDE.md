@@ -6,7 +6,7 @@ See [README.md](README.md) for installation prerequisites, API documentation, an
 
 ## Source Structure
 
-Each module is a directory named after its primary export, containing `index.ts` and optionally `consts.ts` for module-specific constants.
+Each module is a directory named after its primary export, containing `index.ts` and optionally `consts.ts` for module-specific constants, `types.ts` for type definitions and type guards, and `tests.ts` for related tests.
 
 ## Commands
 

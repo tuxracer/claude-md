@@ -32,6 +32,7 @@ pnpm check      # Format, lint, and typecheck (run before commits)
 - **Arrow functions**: Use `const foo = () => { ... }` (enforced by ESLint, auto-fixable)
 - **Reserve `use` prefix for React hooks**: The `useFoo` naming convention is reserved for React hooks. For boolean options or flags, use names like `systemFont`, `enableCache`, or `withValidation` instead of `useSystemFont`, `useCache`, or `useValidation`
 - **Named imports**: Use `import { pipe, filter } from 'remeda'` not `import * as R` (tree-shaking)
+- **React context over prop drilling**: For app-wide state that's needed across many components (e.g., capabilities, settings), use React context instead of passing props through multiple levels. See `src/ui/AppCapabilities` for an example. This keeps component interfaces clean and avoids threading props through intermediate components that don't use them.
 - **Remeda utilities**: Prefer for array/object manipulation over manual loops where it improves readability without hurting performance (e.g., `flatMap` to flatten nested loops, `find` for searching, `sortBy` for sorting)
 - **Named constants**: Use `const HEADER_SIZE = 16` not magic numbers
 - **Numeric separators**: Use underscore separators for numbers 1000 and above for readability (`1_500`, `44_100`, `100_000`)
@@ -75,6 +76,7 @@ pnpm check      # Format, lint, and typecheck (run before commits)
   ```
 
   In `Game/index.ts`:
+
   ```typescript
   export * from "./consts";
   export * from "./types";
